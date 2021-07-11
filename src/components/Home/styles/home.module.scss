@@ -1,0 +1,15 @@
+@import '../../../../styles/helpers/config.scss';
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}

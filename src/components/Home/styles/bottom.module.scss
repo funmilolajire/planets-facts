@@ -1,0 +1,27 @@
+@import '../../../../styles/helpers/config.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .box {
+        width: 22%;
+        height: 12.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.4rem;
+        border: 1px solid $line-color;
+        padding-left: 2.3rem;
+
+        h4 {
+            color: transparentize($color: $primary-color, $amount: 0.5);
+        }
+
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+}

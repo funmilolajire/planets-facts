@@ -18,7 +18,7 @@ class MyDocument extends Document {
                         href="https://fonts.gstatic.com"
                         crossOrigin="true" />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Antonio&family=Spartan:wght@400;700&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Antonio:wght@400&family=Spartan:wght@400;700&display=swap"
                         rel="stylesheet" />
                 </Head>
                 <body>
