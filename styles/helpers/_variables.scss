@@ -1,0 +1,22 @@
+// fonts
+$primary-font: 'Spartan',
+sans-serif;
+$large-font: 'Antonio',
+sans-serif;
+
+// background colors
+$primary-bg: #070724;
+$button-hover-bg: transparentize($color:#d8d8d8, $amount:0.8);
+$mercury-bg:#419ebb;
+$venus-bg:#eda249;
+$earth-bg:#6f2ed6;
+$mars-bg:#d14C32;
+$jupiter-bg:#d83a34;
+$saturn-bg:#cd5120;
+$uranus-bg:#1ec2a4;
+$neptune-bg:#2d68f0;
+
+// colors
+$primary-color: #fff;
+$faded-color: transparentize($color:#fff, $amount:0.5);
+$line-color: transparentize($color:#fff, $amount:0.8);
