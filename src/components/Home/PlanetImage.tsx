@@ -10,7 +10,6 @@ const PlanetImage: FC<PlanetImageData> = ({ button, planet, geology, internal, n
             structure: internal,
             geology: geology
         }
-        console.log(images)
         setImage(button !== "geology" ? images[button] : images['overview'])
     }, [button, geology, internal, planet])
     return (

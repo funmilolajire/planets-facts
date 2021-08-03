@@ -6,14 +6,19 @@ import absoluteUrl from 'next-absolute-url'
 import { useState, useEffect } from 'react';
 import { useAppContext } from '../contexts/state';
 
-export default function Index({ planetsData }: { planetsData: PlanetData[] }) {
+export default function Index() {
   const { planet, setPlanet } = useAppContext()
   const [planetData, setPlanetData] = useState<PlanetData[]>([])
 
   useEffect(() => {
-    const currentPlanet = planetsData.filter(planetData => planet === planetData.name.toLowerCase())
-    setPlanetData(currentPlanet)
-  }, [planetsData, planet])
+    const getPlanets = async () => {
+      const response = await axios({ method: 'GET', url: `${origin + '/data.json'}` })
+      const planetsData: PlanetData[] = response.data
+      const currentPlanet = planetsData.filter(planetData => planet === planetData.name.toLowerCase())
+      setPlanetData(currentPlanet)
+    }
+    getPlanets()
+  }, [planet])
 
   return (
     <div>
@@ -24,13 +29,13 @@ export default function Index({ planetsData }: { planetsData: PlanetData[] }) {
 }
 
 
-export const getStaticProps: GetStaticProps = async () => {
-  const origin = typeof window !== 'undefined' && window.location.href ? window.location.href : '';
-  const response = await axios({ method: 'GET', url: `${origin + '/data.json'}` })
-  const planetsData: PlanetData[] = response.data
-  return {
-    props: {
-      planetsData
-    }
-  }
-}
+// export const getStaticProps: GetStaticProps = async () => {
+//   const origin = typeof window !== 'undefined' && window.location.href ? window.location.href : '';
+//   const response = await axios({ method: 'GET', url: `${origin + '/data.json'}` })
+//   const planetsData: PlanetData[] = response.data
+//   return {
+//     props: {
+//       planetsData
+//     }
+//   }
+// }
