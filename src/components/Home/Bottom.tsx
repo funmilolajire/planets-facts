@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, FC } from 'react';
 import styles from './styles/bottom.module.scss'
 
-const Bottom = () => {
+const Bottom: FC<BottomData> = ({ rotation, revolution, radius, temperature }) => {
     const [items, setItems] = useState<[String, String][]>([])
     useEffect(() => {
         const data = {
-            "rotation time": "17.2 Hours",
-            "revolution time": "84 Years",
-            radius: "25,362 KM",
-            "average temp.": "-195°c"
+            "rotation time": rotation,
+            "revolution time": revolution,
+            radius: radius,
+            "average temp.": temperature
         }
         setItems(Object.entries(data))
-    }, [])
+    }, [rotation, revolution, radius, temperature])
     return (
         <ul className={styles.container}>
             {

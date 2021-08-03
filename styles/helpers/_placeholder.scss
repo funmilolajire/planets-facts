@@ -66,6 +66,6 @@
 
 %button-hover {
     color: $primary-color;
+    border: 1px solid $button-hover-bg;
     background: $button-hover-bg;
-    border: none;
 }

@@ -1,3 +1,4 @@
+import { AppWrapper } from '../contexts/state';
 import type { AppProps } from 'next/app'
 import Layout from '../components/Layout/Layout'
 import ProgressBar from "@badrap/bar-of-progress";
@@ -17,9 +18,11 @@ Router.events.on("routeChangeError", progress.finish);
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <AppWrapper>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AppWrapper>
   )
 }
 export default MyApp

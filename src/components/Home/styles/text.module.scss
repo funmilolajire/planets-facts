@@ -1,3 +1,35 @@
 @import '../../../../styles/helpers/config.scss';
 
-.container {}
+.container {
+    width: 35rem;
+    margin-left: auto;
+
+    h1 {
+        text-transform: uppercase;
+    }
+
+    .info {
+        margin: 2.3rem 0 4rem;
+
+        .writeup {
+            margin-bottom: 2.4rem;
+        }
+
+        .source {
+            color: transparentize($color: $primary-color, $amount: 0.5);
+
+            a {
+                font-weight: 700;
+                text-decoration: underline;
+                // text-underline-offset: 0.2rem;
+                -webkit-text-decoration-color: transparentize($color: $primary-color, $amount: 0.5);
+                text-decoration-color: transparentize($color: $primary-color, $amount: 0.5);
+
+                .icon {
+                    font-size: 1.2rem;
+                    line-height: 0;
+                }
+            }
+        }
+    }
+}
