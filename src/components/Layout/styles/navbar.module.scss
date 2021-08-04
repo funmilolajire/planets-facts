@@ -17,35 +17,169 @@
         font-weight: 400;
     }
 
-    nav {
-        display: flex;
-        align-items: center;
-        gap: 3.3rem;
-        height: 100%;
+    menu {
+        .menuIcon {
+            display: none;
+        }
 
-        h4 {
-            height: 100%;
+        nav {
             display: flex;
             align-items: center;
-            cursor: pointer;
-            position: relative;
+            gap: 3.3rem;
+            height: 100%;
 
-            &::after {
-                position: absolute;
-                content: "";
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 4px;
+            &.mobileNav {
+                display: none;
             }
 
-            @each $planet,
-            $bg-color in $planets {
+            h4 {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                position: relative;
+                opacity: 0.75;
 
-                &.#{$planet}:hover,
-                &.#{$planet}.active {
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 4px;
+                }
+
+                @each $planet,
+                $bg-color in $planets {
+
+                    &.#{$planet}:hover,
+                    &.#{$planet}.active {
+                        opacity: 1;
+
+                        &::after {
+                            background: $bg-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:1200px) {
+    .container {
+        padding: 3.2rem 5.1rem 2.7rem;
+        gap: 3.9rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+
+        menu {
+            nav {
+                h4 {
+                    z-index: 1;
+
                     &::after {
-                        background: $bg-color;
+                        bottom: 0;
+                        height: 100%;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:750px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.6rem 2.4rem;
+        position: relative;
+
+        menu {
+            display: flex;
+            align-items: center;
+
+            .menuIcon {
+                display: flex;
+                align-items: center;
+                font-size: 3rem;
+                cursor: pointer;
+
+                &.active {
+                    opacity: 0.25;
+                }
+
+                &:hover {
+                    opacity: 0.25;
+                }
+            }
+
+            nav {
+                flex-direction: column;
+                position: absolute;
+                top: calc(100% + 1px);
+                left: 0;
+                right: 0;
+                background-color: $primary-bg;
+                height: -webkit-fit-content;
+                height: -moz-fit-content;
+                height: fit-content;
+                z-index: 50;
+                padding: 2.4rem 2.4rem 4.7rem;
+                align-items: flex-start;
+                gap: 0;
+
+                &.mobileNav {
+                    display: flex;
+                }
+
+                &.desktopNav {
+                    display: none;
+                }
+
+                h4 {
+                    padding: 2rem 0;
+                    padding-left: 4.4rem;
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                    letter-spacing: 1.36364px;
+                    opacity: 1;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid transparentize($color: #fff, $amount: 0.9);
+                    }
+
+                    span {
+                        opacity: 0.4;
+                    }
+
+                    &::after {
+                        height: 2rem;
+                        width: 2rem;
+                        left: 0;
+                        top: calc(50% - 1.2rem);
+                        border-radius: 50%;
+                    }
+
+                    @each $planet,
+                    $bg-color in $planets {
+
+                        &.#{$planet} {
+
+                            &::after {
+                                background: $bg-color;
+                            }
+                        }
                     }
                 }
             }

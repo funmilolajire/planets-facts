@@ -3,11 +3,13 @@ import PlanetImage from './PlanetImage';
 import Text from './Text';
 import styles from './styles/home.module.scss'
 import { useState, FC } from 'react';
+import MobileButtons from './MobileButtons';
 
 const Home: FC<PlanetData> = ({ ...planetData }) => {
     const [button, setButton] = useState<keyof ButtonsKeys>('overview')
     return (
         <div className={styles.container}>
+            <MobileButtons name={planetData.name || ''} button={button && button} setButton={setButton} />
             <div className={styles.top}>
                 <PlanetImage {...planetData.images} button={button} name={planetData.name} />
                 <Text {...planetData} button={button} setButton={setButton} />

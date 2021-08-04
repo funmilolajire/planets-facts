@@ -16,8 +16,8 @@ const Text: FC<TextData> = ({ button, setButton, ...planetData }) => {
     }, [button, planetData])
     return (
         <section className={styles.container}>
-            <h1>{planetData.name || ''}</h1>
             <div className={styles.info}>
+                <h1>{planetData.name || ''}</h1>
                 <p className={styles.writeup}>{data.content}</p>
                 <p className={styles.source}>Source : <a
                     href={data.source}
