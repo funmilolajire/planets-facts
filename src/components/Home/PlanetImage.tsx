@@ -12,7 +12,7 @@ const PlanetImage: FC<PlanetImageData> = ({ button, planet, geology, internal, n
         setImage(button !== "geology" ? images[button] : images['overview'])
     }, [button, geology, internal, planet])
     return (
-        <div className={styles.container}>
+        <div id="image" className={styles.container}>
             <picture>
                 {image && <img
                     className={styles.planet}

@@ -15,17 +15,17 @@ const Text: FC<TextData> = ({ button, setButton, ...planetData }) => {
         setData(data)
     }, [button, planetData])
     return (
-        <section className={styles.container}>
-            <div className={styles.info}>
+        <div id="text" className={styles.container}>
+            <section className={styles.info}>
                 <h1>{planetData.name || ''}</h1>
                 <p className={styles.writeup}>{data.content}</p>
                 <p className={styles.source}>Source : <a
                     href={data.source}
                     target="_blank"
                     rel="noopener noreferrer">Wikipedia <FaExternalLinkSquareAlt className={styles.icon} /></a></p>
-            </div>
+            </section>
             <Buttons name={planetData.name || ''} button={button && button} setButton={setButton} />
-        </section>
+        </div>
     )
 }
 

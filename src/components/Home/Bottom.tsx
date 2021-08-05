@@ -13,7 +13,7 @@ const Bottom: FC<BottomData> = ({ rotation, revolution, radius, temperature }) =
         setItems(Object.entries(data))
     }, [rotation, revolution, radius, temperature])
     return (
-        <ul className={styles.container}>
+        <ul id="bottom" className={styles.container}>
             {
                 items && items.map((item, index) =>
                     <li className={styles.box} key={index}>
