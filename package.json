@@ -23,5 +23,27 @@
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1",
     "typescript": "4.3.5"
-  }
+  },
+  "description": "![Design preview for the Planets fact site coding challenge](./preview.jpg)",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funmilolajire/planets-facts.git"
+  },
+  "keywords": [
+    "planets",
+    "planets",
+    "facts",
+    "frontendmentor",
+    "nextjs",
+    "gsap",
+    "scss",
+    "modules"
+  ],
+  "author": "Funmilola O",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/funmilolajire/planets-facts/issues"
+  },
+  "homepage": "https://github.com/funmilolajire/planets-facts#readme"
 }
