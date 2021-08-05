@@ -2,7 +2,7 @@ import { useAppContext } from '../../contexts/state';
 import { FiMenu, FiChevronRight } from 'react-icons/fi'
 import styles from './styles/navbar.module.scss'
 import { useState, useLayoutEffect } from 'react';
-import { menuHide, menuShow } from '../../animations/index';
+import { menuHide, menuShow } from '../../animations';
 import { Transition } from 'react-transition-group';
 
 const duration = 500;
