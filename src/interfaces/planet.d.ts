@@ -50,3 +50,25 @@ interface TextData extends PlanetData {
     button: keyof ButtonsKeys
     setButton: Dispatch<SetStateAction<string>>
 }
+
+interface NavbarTransitionState {
+    entering: string,
+    entered: string,
+    exiting: string,
+    exited: string,
+}
+
+interface NavbarTransition {
+    entering: {
+        [key]: string | number | boolean
+    },
+    entered: {
+        [key]: string | number | boolean
+    },
+    exiting: {
+        [key]: string | number | boolean
+    },
+    exited: {
+        [key]: string | number | boolean
+    }
+}
