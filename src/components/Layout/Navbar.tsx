@@ -13,21 +13,23 @@ const Navbar = () => {
     const handleMenu = () => {
         if (initial === true) {
             setInitial(false)
+            setShowMenu(true)
+        } else {
+            setShowMenu(prev => !prev)
         }
-        setShowMenu(prev => !prev)
     }
-    // useLayoutEffect(() => {
-    //     if (!showMenu) {
-    //         menuHide('#mobileNav', '#secondary')
-    //     } else if (showMenu || showMenu && !initial) {
-    //         gsap.to(['#secondary', '#mobileNav'], {
-    //             duration: 0,
-    //             opacity: 1,
-    //             height: "100%"
-    //         });
-    //         menuShow('#secondary', '#mobileNav')
-    //     }
-    // }, [showMenu, initial])
+    useLayoutEffect(() => {
+        // if (!showMenu) {
+        //     menuHide('#mobileNav', '#secondary')
+        // } else if (showMenu || showMenu && !initial) {
+        //     gsap.to(['#secondary', '#mobileNav'], {
+        //         duration: 0,
+        //         opacity: 1,
+        //         height: "100%"
+        //     });
+        //     menuShow('#secondary', '#mobileNav')
+        // }
+    }, [showMenu, initial])
 
     return (
         <header id="navbar" className={styles.container}>

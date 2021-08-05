@@ -3,7 +3,7 @@ import styles from './styles/buttons.module.scss'
 
 const MobileButtons: FC<ButtonsData> = ({ name, button, setButton }) => {
     return (
-        <div id="navbar" className={`${styles.container} ${styles.mobile} ${name && styles[name.toLowerCase()]}`}>
+        <div id="image" className={`${styles.container} ${styles.mobile} ${name && styles[name.toLowerCase()]}`}>
             <button onClick={() => setButton('overview')} className={button && button === "overview" ? styles.active : ''} value="overview">
                 <h3 className={styles.text}>Overview</h3>
             </button>
