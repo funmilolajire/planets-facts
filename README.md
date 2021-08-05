@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/funmilolajire/planets-facts)
-- Live Site URL: [Add live site URL here](https://planets-facts.vercel.app/)
+- Solution URL: [Github](https://github.com/funmilolajire/planets-facts)
+- Live Site URL: [View Site](https://planets-facts.vercel.app/)
 
 ## My process
 
