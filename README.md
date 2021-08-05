@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot](public\screenshot.png)
+![screenshot](./public/screenshot.png)
 
 ### Links
 
