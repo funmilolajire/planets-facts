@@ -5,7 +5,7 @@ import { useState, useLayoutEffect } from 'react';
 import { menuHide, menuShow } from '../../animations/index';
 import { Transition } from 'react-transition-group';
 
-const duration = 300;
+const duration = 500;
 
 const defaultStyle = {
     transition: `all ${duration}ms ease-out`,
